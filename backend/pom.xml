@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.faultlens</groupId>
+    <artifactId>faultlens-backend</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>faultlens-backend</name>
+    <description>FaultLens Microservices Backend Architecture with Eureka Service Discovery</description>
+
+    <modules>
+        <module>eureka-server</module>
+        <module>api-gateway</module>
+        <module>auth-service</module>
+        <module>equipment-service</module>
+        <module>sensor-service</module>
+        <module>maintenance-service</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <spring.boot.version>3.2.3</spring.boot.version>
+    </properties>
+</project>

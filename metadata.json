@@ -1,0 +1,6 @@
+{
+  "name": "FaultLens - Lab Equipment Failure Prediction & Maintenance Assistant",
+  "description": "Intelligent laboratory equipment failure prediction, real-time sensor anomaly detection, SLM diagnostic assistant with RAG manuals, and automated maintenance workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

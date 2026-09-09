@@ -1,0 +1,54 @@
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python / AI
+ai/venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Java / Maven / Backend
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+
+# Logs & Runtime Output
+*.log
+eureka.log
+ai.log
+auth.log
+equipment.log
+sensor.log
+maintenance.log
+gateway.log
+
+# System & OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor Settings
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Environment & Secret files
+.env
+.env.local
+.env.*.local

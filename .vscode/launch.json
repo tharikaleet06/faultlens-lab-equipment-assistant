@@ -1,0 +1,108 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "1. Eureka Server (8761)",
+      "request": "launch",
+      "mainClass": "com.faultlens.eureka.EurekaServerApplication",
+      "projectName": "eureka-server",
+      "cwd": "${workspaceFolder}/backend/eureka-server"
+    },
+    {
+      "type": "java",
+      "name": "2. Auth Service (8081)",
+      "request": "launch",
+      "mainClass": "com.faultlens.auth.AuthServiceApplication",
+      "projectName": "auth-service",
+      "cwd": "${workspaceFolder}/backend/auth-service",
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_DATABASE": "faultlens_db",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "rootpassword"
+      }
+    },
+    {
+      "type": "java",
+      "name": "3. Equipment Service (8082)",
+      "request": "launch",
+      "mainClass": "com.faultlens.equipment.EquipmentServiceApplication",
+      "projectName": "equipment-service",
+      "cwd": "${workspaceFolder}/backend/equipment-service",
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_DATABASE": "faultlens_db",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "rootpassword"
+      }
+    },
+    {
+      "type": "java",
+      "name": "4. Sensor Service (8083)",
+      "request": "launch",
+      "mainClass": "com.faultlens.sensor.SensorServiceApplication",
+      "projectName": "sensor-service",
+      "cwd": "${workspaceFolder}/backend/sensor-service",
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_DATABASE": "faultlens_db",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "rootpassword"
+      }
+    },
+    {
+      "type": "java",
+      "name": "5. Maintenance Service (8084)",
+      "request": "launch",
+      "mainClass": "com.faultlens.maintenance.MaintenanceServiceApplication",
+      "projectName": "maintenance-service",
+      "cwd": "${workspaceFolder}/backend/maintenance-service",
+      "env": {
+        "MYSQL_HOST": "localhost",
+        "MYSQL_PORT": "3306",
+        "MYSQL_DATABASE": "faultlens_db",
+        "MYSQL_USER": "root",
+        "MYSQL_PASSWORD": "rootpassword"
+      }
+    },
+    {
+      "type": "java",
+      "name": "6. API Gateway (8080)",
+      "request": "launch",
+      "mainClass": "com.faultlens.gateway.ApiGatewayApplication",
+      "projectName": "api-gateway",
+      "cwd": "${workspaceFolder}/backend/api-gateway"
+    },
+    {
+      "type": "debugpy",
+      "name": "Python AI Service (FastAPI 8000)",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "app.main:app",
+        "--reload",
+        "--port",
+        "8000"
+      ],
+      "cwd": "${workspaceFolder}/ai"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "🚀 Launch All Microservices & AI",
+      "configurations": [
+        "1. Eureka Server (8761)",
+        "2. Auth Service (8081)",
+        "3. Equipment Service (8082)",
+        "4. Sensor Service (8083)",
+        "5. Maintenance Service (8084)",
+        "6. API Gateway (8080)",
+        "Python AI Service (FastAPI 8000)"
+      ]
+    }
+  ]
+}

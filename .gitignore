@@ -6,6 +6,7 @@ dist-ssr/
 
 # Python / AI
 ai/venv/
+ai-service/venv/
 venv/
 __pycache__/
 *.py[cod]

@@ -91,9 +91,13 @@ sleep 6
 echo "[4/5] Launching Microservices & Python AI Service..."
 
 # Python AI Service (Port 8000)
-cd "$ROOT_DIR/ai"
+AI_DIR="$ROOT_DIR/ai-service"
+if [ ! -d "$AI_DIR" ]; then
+    AI_DIR="$ROOT_DIR/ai"
+fi
+cd "$AI_DIR"
 if [ -d "venv" ]; then
-    "$ROOT_DIR/ai/venv/bin/python3" -m uvicorn app.main:app --host 0.0.0.0 --port 8000 > "$ROOT_DIR/ai.log" 2>&1 &
+    "$AI_DIR/venv/bin/python3" -m uvicorn app.main:app --host 0.0.0.0 --port 8000 > "$ROOT_DIR/ai.log" 2>&1 &
     AI_PID=$!
 elif command -v uvicorn >/dev/null 2>&1; then
     uvicorn app.main:app --host 0.0.0.0 --port 8000 > "$ROOT_DIR/ai.log" 2>&1 &
